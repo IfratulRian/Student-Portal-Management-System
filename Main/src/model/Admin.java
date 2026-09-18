@@ -1,8 +1,8 @@
 package model;
 
 public class Admin extends Person{
-    long adminId;
-    String role; //Designation.
+    private long adminId;
+    private String role; //Designation.
     /* Like: SUPER_ADMIN, EVENT_MANAGER, CLUB_MANAGER*/
 
     public Admin(long id, String name, String email, String phone, long adminId, String role){
