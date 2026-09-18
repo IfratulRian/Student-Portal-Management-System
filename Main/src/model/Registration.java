@@ -1,13 +1,13 @@
 package model;
 
 public class Registration {
-    long registrationId;
-    String student;
-    String event;
-    String regestrationDate;
-    String status;
-    double attendance;
-    int score;
+    private long registrationId;
+    private String student;
+    private String event;
+    private String regestrationDate;
+    private String status;
+    private double attendance;
+    private int score;
 
     public Registration(long registrationId, String student, String event,
     String regestrationDate, String status, double attendance, int score){
