@@ -9,7 +9,9 @@ public class Student extends Person{
     double cgpa;
     int points; //Credits
 
-    public Student(long id, String name, String email, String phone, long adminId, String role){
+    public Student(long id, String name, String email, String phone,
+        String department, int semester, double cgpa, int points){
+
         super(id, name, email, phone);
         this.StudentId = StudentId;
         this.department = department;
