@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Main/Main.iml" filepath="$PROJECT_DIR$/Main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Main/All.iml" filepath="$PROJECT_DIR$/Main/All.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Student Portal Management System.iml" filepath="$PROJECT_DIR$/.idea/Student Portal Management System.iml" />
     </modules>
   </component>
