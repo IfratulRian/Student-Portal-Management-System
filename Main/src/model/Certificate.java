@@ -1,11 +1,11 @@
 package model;
 
 public class Certificate {
-    long certificateId;
-    String student;
-    String event;
-    String type;
-    String issueDate;
+    private long certificateId;
+    private String student;
+    private String event;
+    private String type;
+    private String issueDate;
 
     public Certificate(long certificateId, String student, String event,
     String type, String issueDate){
