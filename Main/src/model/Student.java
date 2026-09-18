@@ -1,19 +1,15 @@
 package model;
 
-import javax.swing.*;
-
 public class Student extends Person{
-    long StudentId;
-    String department;
-    int semester;
-    double cgpa;
-    int points; //Credits
+    private String department;
+    private int semester;
+    private double cgpa;
+    private int points; //Credits
 
     public Student(long id, String name, String email, String phone,
         String department, int semester, double cgpa, int points){
 
         super(id, name, email, phone);
-        this.StudentId = StudentId;
         this.department = department;
         this.semester = semester;
         this.cgpa = cgpa;
