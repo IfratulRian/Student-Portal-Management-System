@@ -1,15 +1,15 @@
 package model;
 
 public class Event {
-    long eventId;
-    String name;
-    String type;
+    private long eventId;
+    private String name;
+    private String type;
     /*WORKSHOP, SEMINAR, COMPETITION, CONTEST, CULTURAL*/
-    String date;
-    int maxParticipants;
-    int registrationFee;
-    String organizer;
-    String participants;
+    private String date;
+    private int maxParticipants;
+    private int registrationFee;
+    private String organizer;
+    private String participants;
 
     public Event(long eventId, String name, String type, String date,
         int maxParticipants, int registrationFee, String organizer,
