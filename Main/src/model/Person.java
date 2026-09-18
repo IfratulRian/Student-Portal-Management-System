@@ -1,6 +1,6 @@
 package model;
 
-public class Person {
+abstract class Person {
     long id;
     String name;
     String email;
