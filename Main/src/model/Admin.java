@@ -10,4 +10,17 @@ public class Admin extends Person{
         this.adminId = adminId;
         this.role = role;
     }
+
+    public long getAdminId(){
+        return adminId;
+    }
+    public void setAdminId(long adminId){
+        this.adminId = adminId;
+    }
+    public String getRole(){
+        return role;
+    }
+    public void setRole(String role){
+        this.role = role;
+    }
 }
