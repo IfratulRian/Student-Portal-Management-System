@@ -1,19 +1,26 @@
 package util;
+
 import java.io.*;
 import java.util.ArrayList;
 
 public class FileManager {
     public static void write(String fileName, ArrayList<String> data){
         try{
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+            File file = new File(fileName);
+            if(file.getParentFile() != null){
+                file.getParentFile().mkdirs();
+            }
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             for(String line : data){
                 writer.write(line);
                 writer.newLine();
             }
             writer.close();
+            System.out.println("Data saved to: " + file.getAbsolutePath());
         }
         catch(IOException e){
             System.out.println("Error writing to file.");
+            e.printStackTrace();
         }
     }
     public static ArrayList<String> read(String fileName){
@@ -28,6 +35,7 @@ public class FileManager {
         }
         catch(IOException e){
             System.out.println("Error reading file.");
+            e.printStackTrace();
         }
         return data;
     }
