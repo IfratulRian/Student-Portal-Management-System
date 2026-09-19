@@ -48,10 +48,75 @@ public class StudentManager {
     }
 
     private void addStudent(){
+        System.out.print("Enter ID: ");
+        long id = sc.nextLong();
+        sc.nextLine();
 
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Email: ");
+        String email = sc.nextLine();
+
+        System.out.print("Enter Phone: ");
+        String phone = sc.nextLine();
+
+        System.out.print("Enter Department: ");
+        String department = sc.nextLine();
+
+        System.out.print("Enter Semester: ");
+        int semester = sc.nextInt();
+
+        System.out.print("Enter CGPA: ");
+        double cgpa = sc.nextDouble();
+
+        System.out.print("Enter Points: ");
+        int points = sc.nextInt();
+        Student student = new Student(
+                id, name, email, phone,
+                department, semester, cgpa, points
+        );
+        students.add(student);
+        saveStudents();
+        System.out.println("Student added successfully!");
     }
-    private void viewStudents(){
 
+    private void viewStudents(){
+        if(students.isEmpty()){
+            System.out.println("No students found.");
+            return;
+        }
+
+        for(Student student : students){
+            System.out.println(
+                    student.getId() + " | " +
+                            student.getName() + " | " +
+                            student.getEmail() + " | " +
+                            student.getPhone() + " | " +
+                            student.getDepartment() + " | " +
+                            student.getSemester() + " | " +
+                            student.getCgpa() + " | " +
+                            student.getPoints()
+            );
+        }
+    }
+
+    private void saveStudents(){
+        ArrayList<String> data = new ArrayList<>();
+
+        for(Student student : students){
+            String line =
+                    student.getId() + "|" +
+                            student.getName() + "|" +
+                            student.getEmail() + "|" +
+                            student.getPhone() + "|" +
+                            student.getDepartment() + "|" +
+                            student.getSemester() + "|" +
+                            student.getCgpa() + "|" +
+                            student.getPoints();
+            data.add(line);
+        }
+        FileManager.write("data/students.txt", data);
     }
     private void searchStudent(){
 
