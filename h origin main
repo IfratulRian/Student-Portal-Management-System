@@ -1,0 +1,10 @@
+*   [33m2cb3358[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Merge branch 'main' of https://github.com/IfratulRian/Student-Portal-Management-System # Please enter a commit message to explain why this merge is necessary, # especially if it merges an updated upstream into a topic branch. # # Lines starting with '#' will be ignored, and an empty message aborts # the commit.
+[31m|[m[32m\[m  
+[31m|[m * [33ma24ed31[m[33m ([m[1;31morigin/main[m[33m)[m Asif edited
+[31m|[m * [33m49c4dc0[m Asif edited
+[31m|[m * [33m64db97e[m Asif edited
+* [32m|[m [33mc4b9a9e[m Added imported files
+[32m|[m[32m/[m  
+* [33mcbbf9f1[m Added almost everything about RegistrationManager.java
+* [33mdacd080[m Added EventManager.java
+* [33m6c29f82[m ClubManager.java done
