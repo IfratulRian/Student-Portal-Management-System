@@ -1,8 +1,8 @@
 package manager;
 
-import model.Club;
-import model.Event;
-import model.Student;
+import model.event.Club;
+import model.event.Event;
+import model.user.Student;
 import util.FileManager;
 
 import java.util.ArrayList;

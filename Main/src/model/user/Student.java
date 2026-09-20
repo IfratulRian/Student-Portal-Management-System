@@ -1,6 +1,6 @@
-package model;
+package model.user;
 
-public class Student extends Person{
+public class Student extends Person {
     private String department;
     private int semester;
     private double cgpa;

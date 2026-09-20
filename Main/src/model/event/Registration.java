@@ -1,4 +1,6 @@
-package model;
+package model.event;
+
+import model.user.Student;
 
 public class Registration {
     private long registrationId;
