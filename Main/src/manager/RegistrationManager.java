@@ -1,8 +1,8 @@
 package manager;
 
-import model.Event;
-import model.Registration;
-import model.Student;
+import model.event.Event;
+import model.event.Registration;
+import model.user.Student;
 import util.FileManager;
 import java.util.ArrayList;
 import java.util.Scanner;

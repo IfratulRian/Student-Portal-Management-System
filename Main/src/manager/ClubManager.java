@@ -1,6 +1,6 @@
 package manager;
 
-import model.Student;
+import model.user.Student;
 import util.FileManager;
 import java.util.ArrayList;
 import java.util.Scanner;

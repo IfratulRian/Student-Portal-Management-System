@@ -1,6 +1,6 @@
-package model;
+package model.user;
 
-public class Admin extends Person{
+public class Admin extends Person {
     private String role; //Designation.
     /* Like: SUPER_ADMIN, EVENT_MANAGER, CLUB_MANAGER*/
 
