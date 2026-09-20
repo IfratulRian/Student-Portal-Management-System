@@ -1,0 +1,3 @@
+807|Md. Ifratul Islam Rian|252-15-807@diu.edu.bd|01234567890|CSE|5|3.85|66
+111|Kamal Miah|252-15-111@diu.edu.bd|0122345678|SWE|5|3.55|66
+101|Jahed Bin Salem|252-15-101@diu.edu.bd|01233456789|THM|5|3.73|66
