@@ -1,26 +1,23 @@
-package manager;
+package manager.user;
 
 import model.user.Student;
 import util.FileManager;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ClubManager {
-
+public class StudentManager {
     private Scanner sc = new Scanner(System.in);
-    private ArrayList<Student> clubMember = new ArrayList<>();
-
+    private ArrayList<Student> students = new ArrayList<>();
     public void start(){
         int choice;
 
         do{
-            System.out.println("\n===== Club Management =====");
-            System.out.println("1. Add Member");
-            System.out.println("2. View Members");
-            System.out.println("3. View President details");
-            System.out.println("4. Search Members");
-            System.out.println("5. Update Details");
-            System.out.println("6. Delete Details");
+            System.out.println("\n===== Student Management =====");
+            System.out.println("1. Add Student");
+            System.out.println("2. View Students");
+            System.out.println("3. Search Student");
+            System.out.println("4. Update Student");
+            System.out.println("5. Delete Student");
             System.out.println("0. Back");
             System.out.print("Enter your choice: ");
 
@@ -28,52 +25,29 @@ public class ClubManager {
 
             switch(choice){
                 case 1:
-                    addMember();
+                    addStudent();
                     break;
                 case 2:
-                    viewMembers();
+                    viewStudents();
                     break;
                 case 3:
-                    viewPresidentDetails();
+                    searchStudent();
                     break;
                 case 4:
-                    searchMember();
+                    updateStudent();
                     break;
                 case 5:
-                    updateDetails();
-                    break;
-                case 6:
-                    deleteDetails();
+                    deleteStudent();
                     break;
                 case 0:
                     break;
                 default:
                     System.out.println("Invalid choice!");
             }
-
         }while(choice != 0);
     }
 
-    private void saveMembers(){
-        ArrayList<String> data = new ArrayList<>();
-
-        for(Student student : clubMember){
-            String line =
-                    student.getId() + "|" +
-                            student.getName() + "|" +
-                            student.getEmail() + "|" +
-                            student.getPhone() + "|" +
-                            student.getDepartment() + "|" +
-                            student.getSemester() + "|" +
-                            student.getCgpa() + "|" +
-                            student.getPoints();
-
-            data.add(line);
-        }
-        FileManager.write("data/clubs.txt", data);
-    }
-
-    private void addMember(){
+    private void addStudent(){
         System.out.print("Enter ID: ");
         long id = sc.nextLong();
         sc.nextLine();
@@ -98,24 +72,22 @@ public class ClubManager {
 
         System.out.print("Enter Points: ");
         int points = sc.nextInt();
-
         Student student = new Student(
                 id, name, email, phone,
                 department, semester, cgpa, points
         );
-
-        clubMember.add(student);
-        saveMembers();
-        System.out.println("Member added successfully!");
+        students.add(student);
+        saveStudents();
+        System.out.println("Student added successfully!");
     }
 
-    private void viewMembers(){
-        if(clubMember.isEmpty()){
-            System.out.println("No members found.");
+    private void viewStudents(){
+        if(students.isEmpty()){
+            System.out.println("No students found.");
             return;
         }
 
-        for(Student student : clubMember){
+        for(Student student : students){
             System.out.println(
                     student.getId() + " | " +
                             student.getName() + " | " +
@@ -129,16 +101,30 @@ public class ClubManager {
         }
     }
 
-    private void viewPresidentDetails(){
+    private void saveStudents(){
+        ArrayList<String> data = new ArrayList<>();
+
+        for(Student student : students){
+            String line =
+                    student.getId() + "|" +
+                            student.getName() + "|" +
+                            student.getEmail() + "|" +
+                            student.getPhone() + "|" +
+                            student.getDepartment() + "|" +
+                            student.getSemester() + "|" +
+                            student.getCgpa() + "|" +
+                            student.getPoints();
+            data.add(line);
+        }
+        FileManager.write("data/students.txt", data);
+    }
+    private void searchStudent(){
 
     }
-    private void searchMember(){
+    private void updateStudent(){
 
     }
-    private void updateDetails(){
-
-    }
-    private void deleteDetails(){
+    private void deleteStudent(){
 
     }
 }

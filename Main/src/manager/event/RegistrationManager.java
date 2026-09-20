@@ -1,4 +1,4 @@
-package manager;
+package manager.event;
 
 import model.event.Event;
 import model.event.Registration;
