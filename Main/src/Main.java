@@ -5,5 +5,3 @@ public class Main {
         CampusSystem.start();
     }
 }
-// added by Rian old
-// reviewed by rian new
