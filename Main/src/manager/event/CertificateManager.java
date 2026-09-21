@@ -1,4 +1,4 @@
-package manager;
+package manager.event;
 
 import model.event.Certificate;
 import model.event.Event;

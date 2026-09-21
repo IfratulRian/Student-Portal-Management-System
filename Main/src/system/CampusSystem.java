@@ -1,5 +1,10 @@
 package system;
-import manager.*;
+import manager.event.CertificateManager;
+import manager.event.ClubManager;
+import manager.event.EventManager;
+import manager.event.RegistrationManager;
+import manager.user.StudentManager;
+
 import java.util.Scanner;
 
 public class CampusSystem {
