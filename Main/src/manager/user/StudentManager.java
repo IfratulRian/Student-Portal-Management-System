@@ -1,6 +1,7 @@
 package manager.user;
 
 import model.user.Student;
+import java.time.LocalDate;
 import util.FileManager;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -61,6 +62,12 @@ public class StudentManager {
         System.out.print("Enter Phone: ");
         String phone = sc.nextLine();
 
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+
+        System.out.print("Enter Date of Birth (YYYY-MM-DD): ");
+        LocalDate dateOfBirth = LocalDate.parse(sc.nextLine());
+
         System.out.print("Enter Department: ");
         String department = sc.nextLine();
 
@@ -72,15 +79,18 @@ public class StudentManager {
 
         System.out.print("Enter Points: ");
         int points = sc.nextInt();
+
         Student student = new Student(
                 id, name, email, phone,
+                address, dateOfBirth,
                 department, semester, cgpa, points
         );
+
         students.add(student);
         saveStudents();
+
         System.out.println("Student added successfully!");
     }
-
     private void viewStudents(){
         if(students.isEmpty()){
             System.out.println("No students found.");
