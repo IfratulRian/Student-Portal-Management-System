@@ -1,6 +1,6 @@
-package model;
-import java.time.LocalDate;
+package model.user;
 
+import java.time.LocalDate;
 public class Student extends Person {
     private String department;
     private int semester;

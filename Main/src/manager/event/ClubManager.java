@@ -1,6 +1,7 @@
 package manager.event;
 
 import model.user.Student;
+import java.time.LocalDate;
 import util.FileManager;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -87,6 +88,12 @@ public class ClubManager {
         System.out.print("Enter Phone: ");
         String phone = sc.nextLine();
 
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+
+        System.out.print("Enter Date of Birth (YYYY-MM-DD): ");
+        LocalDate dateOfBirth = LocalDate.parse(sc.nextLine());
+
         System.out.print("Enter Department: ");
         String department = sc.nextLine();
 
@@ -101,11 +108,13 @@ public class ClubManager {
 
         Student student = new Student(
                 id, name, email, phone,
+                address, dateOfBirth,
                 department, semester, cgpa, points
         );
 
         clubMember.add(student);
         saveMembers();
+
         System.out.println("Member added successfully!");
     }
 
