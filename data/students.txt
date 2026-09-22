@@ -1,2 +1,0 @@
-101|Jahed Bin Salem|252-15-101@diu.edu.bd|01233456789|THM|5|3.73|66
-111|KamaL Miah|252-15-111@diu.edu.bd|01223456789|SWE|5|3.55|66
